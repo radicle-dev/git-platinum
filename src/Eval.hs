@@ -20,7 +20,7 @@ import qualified Radicle.Lang.Doc as Doc
 import           Radicle.Lang.Identifier (Ident(..))
 import           Radicle.Lang.Internal.Orphans ()
 
--- | The built-in, original, eval.
+-- | The built-in, original, eval, the MVP.
 baseEval :: Monad m => Value -> Lang m Value
 baseEval val = logValPos val $ case val of
     Atom i -> lookupAtom i
